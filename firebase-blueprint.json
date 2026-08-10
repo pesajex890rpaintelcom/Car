@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "Student and Teacher user accounts for Class 8th C",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string" },
+        "password": { "type": "string" },
+        "role": { "type": "string", "enum": ["teacher", "student"] },
+        "name": { "type": "string" },
+        "rollNo": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["username", "role"]
+    },
+    "assignments": {
+      "title": "Assignments",
+      "description": "Homework and Tests assigned by Maths Teacher for Class 8th C",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["homework", "test"] },
+        "subject": { "type": "string" },
+        "instructions": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "totalMarks": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "teacherUsername": { "type": "string" }
+      },
+      "required": ["title", "type", "subject", "createdAt"]
+    },
+    "submissions": {
+      "title": "Submissions",
+      "description": "Student answers and solution images for homeworks and tests",
+      "type": "object",
+      "properties": {
+        "assignmentId": { "type": "string" },
+        "assignmentTitle": { "type": "string" },
+        "assignmentType": { "type": "string" },
+        "studentUsername": { "type": "string" },
+        "studentName": { "type": "string" },
+        "answerText": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "marksObtained": { "type": "number" },
+        "totalMarks": { "type": "number" },
+        "feedback": { "type": "string" },
+        "status": { "type": "string", "enum": ["submitted", "graded"] }
+      },
+      "required": ["assignmentId", "studentUsername", "submittedAt"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Class 8th C Portal",
+  "description": "Class 8th C Maths learning portal for teacher homework and test assignments and student submission tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
